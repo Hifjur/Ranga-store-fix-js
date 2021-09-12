@@ -1,5 +1,6 @@
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
+  
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -8,9 +9,12 @@ loadProducts();
 
 // show all product in UI 
 const showProducts = (products) => {
+  console.log(products);
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
+    const ratingRate = product.rating.rate;
+    const ratingCount = product.rating.count;
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
@@ -20,6 +24,8 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
+      <p>Nuber of ratings: ${ratingCount}</p>
+      <p>Average Rating: ${ratingRate}<span class="text-danger"> stars</span></p>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
       `;
@@ -75,7 +81,6 @@ const updateTaxAndCharge = () => {
 
 //grandTotal update function
 const updateTotal = () => {
-  console.log("products");
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
