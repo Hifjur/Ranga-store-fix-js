@@ -54,6 +54,8 @@ body {
 .product-image {
   width: 150px;
   height: 150px;
+  border: 8px solid rgb(0, 51, 128);
+  border-radius: 5px;
 }
 .cart {
   width: 350px;
