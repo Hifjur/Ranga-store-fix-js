@@ -1,10 +1,13 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  
 }
+.text-color{
+  color: azure;
+}
+
 .bg-blue{
-  background-color: rgb(207, 228, 252);
+  background-color: rgb(2, 33, 48);
 }
 .search-field {
   border: none;
@@ -44,7 +47,7 @@ body {
   transition: 0.6s;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 4px 4px 7px rgb(128, 128, 128);
   border-radius: 10px;
   border: 1px solid cyan;
 }
@@ -56,7 +59,7 @@ body {
   width: 350px;
   /* border: 1px solid green; */
   padding: 10px;
-  box-shadow: 10px 10px 20px rgb(192, 192, 192);
+  box-shadow: 10px 10px 20px rgb(2, 2, 27);
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
