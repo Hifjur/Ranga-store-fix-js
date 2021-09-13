@@ -56,8 +56,13 @@ body {
 .product-image {
   width: 150px;
   height: 150px;
-  border: 8px solid rgb(0, 51, 128);
+  border: 8px solid rgb(0, 117, 146);
   border-radius: 5px;
+  transition: 0.6s;
+}
+.product-image:hover {
+  border: 8px solid rgb(151, 0, 211);
+  border-radius: 10px;
 }
 .cart {
   width: 350px;
