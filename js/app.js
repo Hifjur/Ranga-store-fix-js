@@ -14,7 +14,7 @@ const showProducts = (products) => {
     const ratingCount = product.rating.count;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `<div class="single-product h-100">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
